@@ -12,8 +12,15 @@
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
-          // Hvis du kommer fra invite-link → åpne CMS
-          if (!user && window.location.hash.includes("recovery_token")) {
+          // Håndter ALLE typer tokens fra e-post
+          if (
+            !user &&
+            (
+              window.location.hash.includes("confirmation_token") ||
+              window.location.hash.includes("recovery_token") ||
+              window.location.hash.includes("invite_token")
+            )
+          ) {
             window.netlifyIdentity.open();
           }
         });
@@ -23,5 +30,14 @@
         });
       }
     </script>
+    <script>
+  if (
+    window.location.hash.includes("confirmation_token") ||
+    window.location.hash.includes("recovery_token") ||
+    window.location.hash.includes("invite_token")
+  ) {
+    window.location.replace("/admin/" + window.location.hash);
+  }
+</script>
   </body>
 </html>
