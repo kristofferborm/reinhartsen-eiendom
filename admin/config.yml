@@ -20,8 +20,8 @@ collections:
             fields:
               - { label: "Tittel", name: "title", widget: "string" }
               - { label: "Adresse / område", name: "address", widget: "string", required: false }
-              - { label: "Type", name: "type", widget: "string", required: false, hint: "For eksempel Utleie, Enebolig, Prosjekt" }
-              - { label: "Areal", name: "area", widget: "string", required: false, hint: "For eksempel 145 kvm" }
+              - { label: "Type", name: "type", widget: "string", required: false }
+              - { label: "Areal", name: "area", widget: "string", required: false }
               - { label: "Pris", name: "price", widget: "number", value_type: "int", required: false }
               - { label: "Beskrivelse", name: "description", widget: "text", required: false }
               - { label: "Lenke", name: "link", widget: "string", required: false }
