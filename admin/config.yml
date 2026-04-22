@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site_content"
+    label: "Nettsideinnhold"
+    files:
+      - label: "Eiendommer"
+        name: "properties"
+        file: "content/properties.json"
+        fields:
+          - label: "Eiendommer"
+            name: "properties"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Tittel", name: "title", widget: "string" }
+              - { label: "Adresse / område", name: "address", widget: "string", required: false }
+              - { label: "Type", name: "type", widget: "string", required: false, hint: "For eksempel Utleie, Enebolig, Prosjekt" }
+              - { label: "Areal", name: "area", widget: "string", required: false, hint: "For eksempel 145 kvm" }
+              - { label: "Pris", name: "price", widget: "number", value_type: "int", required: false }
+              - { label: "Beskrivelse", name: "description", widget: "text", required: false }
+              - { label: "Lenke", name: "link", widget: "string", required: false }
+              - { label: "Bilde", name: "image", widget: "image", required: false }

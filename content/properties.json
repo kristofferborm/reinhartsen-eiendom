@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "title": "Deichmansgate 37",
+      "address": "Porsgrunn",
+      "type": "Utleieeiendom",
+      "area": "Ca. 180 kvm",
+      "price": 4250000,
+      "description": "Eksempeltekst. Bytt ut denne med kort beskrivelse av eiendommen, standard, beliggenhet eller potensial.",
+      "link": "",
+      "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Eiendom 2",
+      "address": "Vestfold / Telemark",
+      "type": "Utviklingsobjekt",
+      "area": "Ca. 125 kvm",
+      "price": 3190000,
+      "description": "Eksempeltekst. Denne boksen kan redigeres i CMS, og du kan legge til så mange eiendommer du vil.",
+      "link": "",
+      "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Eiendom 3",
+      "address": "Grenland",
+      "type": "Bolig",
+      "area": "Ca. 210 kvm",
+      "price": 5490000,
+      "description": "Eksempeltekst. Legg inn egne bilder, pris, beskrivelse og eventuelt lenke til Finn-annonsen eller annen side.",
+      "link": "",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    }
+  ]
+}
