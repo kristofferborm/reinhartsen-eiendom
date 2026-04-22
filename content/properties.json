@@ -3,32 +3,32 @@
     {
       "title": "Deichmansgate 37",
       "address": "Porsgrunn",
-      "type": "Utleieeiendom",
+      "type": "Rental property",
       "area": "Ca. 180 kvm",
-      "price": 4250000,
-      "description": "Eksempeltekst. Bytt ut denne med kort beskrivelse av eiendommen, standard, beliggenhet eller potensial.",
+      "price": 41500,
+      "description": "Renovated detached house with 5 bedrooms in Porsgrunn. Modern standard throughout, fully furnished and move-in ready.\n\nWell suited for companies needing housing for employees in the Porsgrunn and Skien area. Contact us for pricing.",
       "link": "",
-      "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80"
+      "image": "/assets/uploads/bilde-11-jul-2024-12-42-1-.jpg"
     },
     {
-      "title": "Eiendom 2",
+      "title": "Lunderingen 9",
       "address": "Vestfold / Telemark",
-      "type": "Utviklingsobjekt",
-      "area": "Ca. 125 kvm",
-      "price": 3190000,
-      "description": "Eksempeltekst. Denne boksen kan redigeres i CMS, og du kan legge til så mange eiendommer du vil.",
+      "type": "Rental property",
+      "area": "Ca. 150 kvm",
+      "price": 38549,
+      "description": "Detached house with 4 bedrooms in Heistad, Porsgrunn. 2 showers and 2 toilets, plus parking for 2 cars.\n\nAvailable from 1 May 2026. Well suited for employees on assignment in the Porsgrunn and Skien area.",
       "link": "",
-      "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
+      "image": "/assets/uploads/skjermbilde-2026-04-22-kl.-14.23.55.png"
     },
     {
-      "title": "Eiendom 3",
-      "address": "Grenland",
+      "title": "Gravabakken 9",
+      "address": "Porsgrunn/Grenland",
       "type": "Bolig",
-      "area": "Ca. 210 kvm",
-      "price": 5490000,
-      "description": "Eksempeltekst. Legg inn egne bilder, pris, beskrivelse og eventuelt lenke til Finn-annonsen eller annen side.",
+      "area": "Ca. 200 kvm",
+      "price": 58650,
+      "description": "Spacious detached house with 7 bedrooms, 2.5 bathrooms, and 2 kitchens in Heistad, Porsgrunn.\n\nWell suited for companies needing to house a larger group of employees in the Grenland area. Contact us for pricing.",
       "link": "",
-      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+      "image": "/assets/uploads/skjermbilde-2026-04-22-kl.-14.25.15.png"
     }
   ]
 }
