@@ -4,40 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reinhartsen Eiendom CMS</title>
-  </head>
-  <body>
+
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://unpkg.com/decap-cms@3.1.10/dist/decap-cms.js"></script>
+  </head>
 
+  <body>
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          // Håndter ALLE typer tokens fra e-post
-          if (
-            !user &&
-            (
-              window.location.hash.includes("confirmation_token") ||
-              window.location.hash.includes("recovery_token") ||
-              window.location.hash.includes("invite_token")
-            )
-          ) {
-            window.netlifyIdentity.open();
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
           }
-        });
-
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
         });
       }
     </script>
-    <script>
-  if (
-    window.location.hash.includes("confirmation_token") ||
-    window.location.hash.includes("recovery_token") ||
-    window.location.hash.includes("invite_token")
-  ) {
-    window.location.replace("/admin/" + window.location.hash);
-  }
-</script>
   </body>
 </html>
