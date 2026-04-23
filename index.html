@@ -377,8 +377,9 @@
         const data = await response.json();
         const properties = data.properties || [];
 
-        stat.textContent = properties.length;
-
+      if (stat) {
+  stat.textContent = properties.length;
+}
         if (!properties.length) {
           grid.innerHTML = '<div class="empty-state">Ingen eiendommer er lagt inn ennå. Logg inn på CMS og legg til den første.</div>';
           return;
