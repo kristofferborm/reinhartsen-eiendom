@@ -122,6 +122,87 @@
       .hero-stats{grid-template-columns:1fr}
       .button{width:100%}
     }
+    .hero-logo {
+  width: 100%;
+  max-width: 620px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  min-height: 320px;
+}
+
+.trust-section {
+  padding: 30px 0 20px;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.trust-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.trust-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.trust-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.property-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.16);
+}
+
+.property-image {
+  aspect-ratio: 16 / 9;
+}
+
+.property-button {
+  min-height: 40px;
+  padding: 0 14px;
+  font-size: .92rem;
+  color: #334155;
+  border-color: #d5dbe4;
+  background: #fff;
+}
+
+.property-price {
+  font-size: 1rem;
+}
+
+#eiendommer,
+#kontakt {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+@media (max-width: 960px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -204,69 +285,69 @@
       </div>
     </section>
 
-    <section id="kontakt">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <h2>Kontakt oss</h2>
-            <p>Ta kontakt med oss dersom du har spørsmål om en eiendom, ønsker et pristilbud eller har annet du lurer på.</p>
-          </div>
-        </div>
+   <section id="kontakt">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <h2>Kontakt oss</h2>
+        <p>
+          Ta kontakt dersom dere ønsker mer informasjon om boligene, tilgjengelighet
+          eller leie for ansatte og bedrifter.
+        </p>
+      </div>
+    </div>
 
-        <div class="contact-wrap">
-          <div class="contact-card">
-            <h3>Reinhartsen Eiendom AS</h3>
-            <p class="small"> Fyll ut skjema og send inn, så tar vi kontakt med deg.</p>
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <h3>Reinhartsen Eiendom AS</h3>
+        <p class="small">Vi svarer normalt innen 24 timer.</p>
 
-            <div class="contact-list">
-              <div class="contact-item">
-                <strong>E-post</strong>
-                <span>kristoffer@reinhartsen.com</span>
-              </div>
-              <div class="contact-item">
-                <strong>Telefon</strong>
-                <span>+47 90 50 06 68</span>
-              </div>
-              <div class="contact-item">
-                <strong>Kontoradresse</strong>
-                <span>Hoffsveien 1a, 0275 Oslo</span>
-              </div>
-            </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <strong>E-post</strong>
+            <span>kristoffer@reinhartsen.com</span>
           </div>
 
-          <div class="form-card">
-            <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-              <input type="hidden" name="form-name" value="kontakt" />
-              <p hidden>
-                <label>Ikke fyll ut dette feltet: <input name="bot-field" /></label>
-              </p>
+          <div class="contact-item">
+            <strong>Telefon</strong>
+            <span>Legg inn telefonnummer</span>
+          </div>
 
-              <div class="field">
-                <label for="name">Navn</label>
-                <input id="name" type="text" name="name" placeholder="Ditt navn" required />
-              </div>
-
-              <div class="field">
-                <label for="email">E-post</label>
-                <input id="email" type="email" name="email" placeholder="navn@epost.no" required />
-              </div>
-
-              <div class="field">
-                <label for="phone">Telefon</label>
-                <input id="phone" type="text" name="phone" placeholder="+47 ..." />
-              </div>
-
-              <div class="field">
-                <label for="message">Melding</label>
-                <textarea id="message" name="message" placeholder="Skriv meldingen din her" required></textarea>
-              </div>
-
-              <button class="button button-primary" type="submit">Send melding</button>
-              <p class="small"Vi tar kontakt med deg så fort vi har mulighet til - innen 24 timer.</p>
-            </form>
+          <div class="contact-item">
+            <strong>Område</strong>
+            <span>Porsgrunn, Skien og Grenland</span>
           </div>
         </div>
       </div>
+
+      <div class="form-card">
+        <form action="https://formspree.io/f/SETT_INN_DIN_ID" method="POST">
+          <div class="field">
+            <label for="name">Navn</label>
+            <input id="name" type="text" name="name" placeholder="Ditt navn" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E-post</label>
+            <input id="email" type="email" name="email" placeholder="navn@firma.no" required />
+          </div>
+
+          <div class="field">
+            <label for="company">Firma</label>
+            <input id="company" type="text" name="company" placeholder="Firmanavn" />
+          </div>
+
+          <div class="field">
+            <label for="message">Melding</label>
+            <textarea id="message" name="message" placeholder="Fortell kort hva dere ser etter" required></textarea>
+          </div>
+
+          <button class="button button-primary" type="submit">Send forespørsel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
     </section>
   </main>
 
@@ -303,26 +384,29 @@
           return;
         }
 
-        grid.innerHTML = properties.map(property => `
-          <article class="property-card">
-            <div class="property-image">
-              <img src="${property.image || 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80'}" alt="${property.title || ''}">
-            </div>
-            <div class="property-body">
-              <div class="property-meta">
-                ${property.type ? `<span class="pill">${property.type}</span>` : ''}
-                ${property.area ? `<span class="pill">${property.area}</span>` : ''}
-              </div>
-              <h3>${property.title || ''}</h3>
-              <p class="property-address">${property.address || ''}</p>
-              <p class="property-description">${property.description || ''}</p>
-              <div class="property-footer">
-                <span class="property-price">${property.price ? currency(property.price) : ''}</span>
-                ${property.link ? `<a class="button button-secondary" href="${property.link}" target="_blank" rel="noopener">Les mer</a>` : ''}
-              </div>
-            </div>
-          </article>
-        `).join("");
+       grid.innerHTML = properties.map(property => `
+  <article class="property-card">
+    <div class="property-image">
+      <img src="${property.image || ''}" alt="${property.title || ''}">
+    </div>
+
+    <div class="property-body">
+      <div class="property-meta">
+        ${property.type ? `<span class="pill">${property.type}</span>` : ''}
+        ${property.area ? `<span class="pill">${property.area}</span>` : ''}
+      </div>
+
+      <h3>${property.title || ''}</h3>
+      <p class="property-address">${property.address || ''}</p>
+      <p class="property-description">${property.description || ''}</p>
+
+      <div class="property-footer">
+        <span class="property-price">${property.price ? `Fra ${currency(property.price)} / mnd` : ''}</span>
+        <a class="button button-secondary property-button" href="#kontakt">Send forespørsel</a>
+      </div>
+    </div>
+  </article>
+`).join("");
       } catch (error) {
         grid.innerHTML = '<div class="empty-state">Kunne ikke laste eiendommene. Sjekk at filen <strong>content/properties.json</strong> finnes.</div>';
         console.error(error);
