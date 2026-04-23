@@ -586,29 +586,31 @@
           </div>
 
           <div class="form-card">
-            <form action="https://formspree.io/f/SETT_INN_DIN_ID" method="POST">
-              <div class="field">
-                <label for="name">Navn</label>
-                <input id="name" type="text" name="name" placeholder="Ditt navn" required />
-              </div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="2f7fd0ec-a9de-4b93-b35b-8edd5e042bc1">
+<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+  <div class="field">
+    <label for="name">Navn</label>
+    <input id="name" type="text" name="name" placeholder="Ditt navn" required />
+  </div>
 
-              <div class="field">
-                <label for="email">E-post</label>
-                <input id="email" type="email" name="email" placeholder="navn@firma.no" required />
-              </div>
+  <div class="field">
+    <label for="email">E-post</label>
+    <input id="email" type="email" name="email" placeholder="navn@firma.no" required />
+  </div>
 
-              <div class="field">
-                <label for="company">Firma</label>
-                <input id="company" type="text" name="company" placeholder="Firmanavn" />
-              </div>
+  <div class="field">
+    <label for="company">Firma</label>
+    <input id="company" type="text" name="company" placeholder="Firmanavn" />
+  </div>
 
-              <div class="field">
-                <label for="message">Melding</label>
-                <textarea id="message" name="message" placeholder="Fortell kort hva dere ser etter" required></textarea>
-              </div>
+  <div class="field">
+    <label for="message">Melding</label>
+    <textarea id="message" name="message" placeholder="Fortell kort hva dere ser etter" required></textarea>
+  </div>
 
-              <button class="button button-primary" type="submit">Send forespørsel</button>
-            </form>
+  <button class="button button-primary" type="submit">Send forespørsel</button>
+</form>
           </div>
         </div>
       </div>
