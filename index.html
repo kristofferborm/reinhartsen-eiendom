@@ -512,16 +512,15 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Boliger for bedrifter i Grenland</span>
-          <h1>Boliger tilpasset bedrifter og ansatte i Grenland</h1>
-          <p class="lead">
-            Vi tilbyr fleksible og fullt møblerte boliger for selskaper som trenger
-            trygg, effektiv og profesjonell innkvartering av ansatte.
-          </p>
+          <span class="eyebrow" data-key="hero_eyebrow">Boliger for bedrifter i Grenland</span>
+<h1 data-key="hero_title">Boliger tilpasset bedrifter og ansatte i Grenland</h1>
+<p class="lead" data-key="hero_text">
+  Vi tilbyr fleksible og fullt møblerte boliger for selskaper som trenger
+  trygg, effektiv og profesjonell innkvartering av ansatte.
+</p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#eiendommer">Se eiendommer</a>
-            <a class="button button-secondary" href="#kontakt">Kontakt oss</a>
+<a class="button button-primary" href="#eiendommer" data-key="hero_cta_properties">Se eiendommer</a>
+<a class="button button-secondary" href="#kontakt" data-key="hero_cta_contact">Kontakt oss</a>
           </div>
         </div>
 
@@ -535,9 +534,8 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h2>Hvorfor velge oss</h2>
-            <p>
-              Enkle og praktiske boligløsninger for bedrifter som trenger innkvartering
+            <h2 data-key="trust_title">Hvorfor velge oss</h2>
+            <p data-key="trust_text"Enkle og praktiske boligløsninger for bedrifter som trenger innkvartering
               av ansatte i Porsgrunn, Skien og Grenland.
             </p>
           </div>
@@ -545,18 +543,18 @@
 
         <div class="trust-grid">
           <div class="trust-card">
-            <h3>Fleksible leieforhold</h3>
-            <p>Vi tilbyr løsninger som kan tilpasses ulike behov og oppdragsperioder.</p>
+            <h3 data-key="trust_1_title">Fleksible leieforhold</h3>
+            <p data-key="trust_1_text">Vi tilbyr løsninger som kan tilpasses ulike behov og oppdragsperioder.</p>
           </div>
 
           <div class="trust-card">
-            <h3>Fullt møblerte boliger</h3>
-            <p>Boligene er klare til bruk og passer godt for ansatte som skal flytte rett inn.</p>
+            <h3 data-key="trust_2_title">Fullt møblerte boliger</h3>
+            <p data-key="trust_2_text">Boligene er klare til bruk og passer godt for ansatte som skal flytte rett inn.</p>
           </div>
 
           <div class="trust-card">
-            <h3>Tilpasset bedrifter</h3>
-            <p>Egnet for entreprenører, bemanningsselskaper og andre virksomheter med boligbehov.</p>
+            <h3 data-key="trust_3_title">Tilpasset bedrifter</h3>
+            <p data-key="trust_3_text">Egnet for entreprenører, bemanningsselskaper og andre virksomheter med boligbehov.</p>
           </div>
         </div>
       </div>
@@ -566,8 +564,8 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h2>Våre eiendommer</h2>
-            <p>Her er en oversikt over boligene som er ledige og klare for innflytting.</p>
+            <h2 data-key="properties_title">Våre eiendommer</h2>
+            <p data-key="properties_text">Her er en oversikt over boligene som er ledige og klare for innflytting.</p>
           </div>
         </div>
         <div id="properties-grid" class="properties-grid"></div>
@@ -578,9 +576,8 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h2>Kontakt oss</h2>
-            <p>
-              Ta kontakt dersom dere ønsker mer informasjon om boligene, tilgjengelighet
+           <h2 data-key="contact_title">Kontakt oss</h2>
+            <p data-key="contact_text">Ta kontakt dersom dere ønsker mer informasjon om boligene, tilgjengelighet
               eller leie for ansatte og bedrifter.
             </p>
           </div>
@@ -589,22 +586,22 @@
         <div class="contact-wrap">
           <div class="contact-card">
             <h3>Reinhartsen Eiendom AS</h3>
-            <p class="small">Vi svarer normalt innen 24 timer.</p>
+            <p class="small" data-key="contact_response">Vi svarer normalt innen 24 timer.</p>
 
             <div class="contact-list">
               <div class="contact-item">
-                <strong>E-post</strong>
+                <strong data-key="contact_email_label">E-post</strong>
                 <span>kristoffer@reinhartsen.com</span>
               </div>
 
               <div class="contact-item">
-                <strong>Telefon</strong>
+                <strong data-key="contact_phone_label">Telefon</strong>
                 <span>+47 905 00 668</span>
               </div>
 
               <div class="contact-item">
-                <strong>Område</strong>
-                <span>Porsgrunn, Skien og Grenland</span>
+                <strong data-key="contact_area_label">Område</strong>
+                <span data-key="contact_area_value">Porsgrunn, Skien - Grenland</span>
               </div>
             </div>
           </div>
@@ -614,29 +611,21 @@
   <input type="hidden" name="access_key" value="2f7fd0ec-a9de-4b93-b35b-8edd5e042bc1">
 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
   <div class="field">
-    <label for="name">Navn</label>
-    <input id="name" type="text" name="name" placeholder="Ditt navn" required />
-  </div>
+ <label data-key="form_name_label">Navn</label>
+<input placeholder="Ditt navn" data-placeholder-key="form_name_placeholder">
 
-  <div class="field">
-    <label for="email">E-post</label>
-    <input id="email" type="email" name="email" placeholder="navn@firma.no" required />
-  </div>
+<label data-key="form_email_label">E-post</label>
+<input placeholder="navn@firma.no" data-placeholder-key="form_email_placeholder">
 
-  <div class="field">
-    <label for="company">Firma</label>
-    <input id="company" type="text" name="company" placeholder="Firmanavn" />
-  </div>
+<label data-key="form_company_label">Firma</label>
+<input placeholder="Firmanavn" data-placeholder-key="form_company_placeholder">
 
-  <div class="field">
-    <label for="message">Melding</label>
-    <textarea id="message" name="message" placeholder="Fortell kort hva dere ser etter" required></textarea>
-  </div>
+<label data-key="form_message_label">Melding</label>
+<textarea data-placeholder-key="form_message_placeholder"></textarea>
 
-  <button id="submit-btn" class="button button-primary" type="submit">
-  Send forespørsel
-</button>
-          <div id="form-success" style="display:none; margin-top:16px; padding:12px 16px; background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.3); border-radius:12px; color:#22c55e; font-weight:500;">
+<button id="submit-btn" data-key="send_btn">Send forespørsel</button>
+
+<div id="form-success" data-key="form_success">
   Forespørselen er sendt! Vi tar kontakt innen kort tid.
 </div>
 </form>
@@ -654,143 +643,120 @@
   </footer>
 
 <script>
-  let currentLang = localStorage.getItem("lang") || "no";
+<script>
+let currentLang = localStorage.getItem("lang") || "no";
 
-  const translations = {
-    no: {
-      nav_properties: "Eiendommer",
-      nav_contact: "Kontakt",
-      send_btn: "Send forespørsel"
-    },
-    en: {
-      nav_properties: "Properties",
-      nav_contact: "Contact",
-      send_btn: "Send inquiry"
-    }
-  };
+const translations = {
+  no: {
+    hero_eyebrow: "Boliger for bedrifter i Grenland",
+    hero_title: "Boliger tilpasset bedrifter og ansatte i Grenland",
+    hero_text: "Vi tilbyr fleksible og fullt møblerte boliger for selskaper som trenger trygg, effektiv og profesjonell innkvartering av ansatte.",
+    hero_cta_properties: "Se eiendommer",
+    hero_cta_contact: "Kontakt oss",
 
-  const getText = (value) => {
-    if (!value) return "";
-    if (typeof value === "object") {
-      return value[currentLang] || value.no || value.en || "";
-    }
-    return value;
-  };
+    trust_title: "Hvorfor velge oss",
+    trust_text: "Enkle og praktiske boligløsninger for bedrifter...",
+    trust_1_title: "Fleksible leieforhold",
+    trust_1_text: "Vi tilbyr løsninger som kan tilpasses ulike behov.",
+    trust_2_title: "Fullt møblerte boliger",
+    trust_2_text: "Boligene er klare til bruk.",
+    trust_3_title: "Tilpasset bedrifter",
+    trust_3_text: "Egnet for entreprenører og selskaper.",
 
-  const formatPrice = (price) => {
-    if (!price && price !== 0) return "";
+    properties_title: "Våre eiendommer",
+    properties_text: "Her er en oversikt over boligene som er ledige.",
 
-    if (currentLang === "en") {
-      const eur = price * 0.085;
-      return "From €" + Math.round(eur).toLocaleString("en-GB") + " / month";
-    }
+    contact_title: "Kontakt oss",
+    contact_text: "Ta kontakt dersom dere ønsker mer informasjon.",
+    contact_response: "Vi svarer normalt innen 24 timer.",
+    contact_email_label: "E-post",
+    contact_phone_label: "Telefon",
+    contact_area_label: "Område",
+    contact_area_value: "Porsgrunn, Skien og Grenland",
 
-    return "Fra " + Number(price).toLocaleString("nb-NO") + " kr / mnd";
-  };
+    form_name_label: "Navn",
+    form_name_placeholder: "Ditt navn",
+    form_email_label: "E-post",
+    form_email_placeholder: "navn@firma.no",
+    form_company_label: "Firma",
+    form_company_placeholder: "Firmanavn",
+    form_message_label: "Melding",
+    form_message_placeholder: "Fortell kort hva dere ser etter",
 
-  async function loadProperties() {
-    const grid = document.getElementById("properties-grid");
+    send_btn: "Send forespørsel",
+    sending: "Sender...",
+    sent: "Sendt ✓",
+    form_success: "Forespørselen er sendt!",
+    form_error: "Noe gikk galt. Prøv igjen."
+  },
 
-    try {
-      const response = await fetch("content/properties.json");
-      if (!response.ok) {
-        throw new Error("HTTP " + response.status);
-      }
+  en: {
+    hero_eyebrow: "Corporate housing in Grenland",
+    hero_title: "Housing tailored for companies and employees",
+    hero_text: "We offer flexible and fully furnished housing for companies.",
+    hero_cta_properties: "View properties",
+    hero_cta_contact: "Contact us",
 
-      const data = await response.json();
-      const properties = data.properties || [];
+    trust_title: "Why choose us",
+    trust_text: "Simple and practical housing solutions.",
+    trust_1_title: "Flexible rental terms",
+    trust_1_text: "Adapted to different needs.",
+    trust_2_title: "Fully furnished homes",
+    trust_2_text: "Ready to move in.",
+    trust_3_title: "Tailored for companies",
+    trust_3_text: "Perfect for business needs.",
 
-      grid.innerHTML = properties.map(property => `
-        <article class="property-card">
-          <div class="property-image">
-            <img src="${property.image || ''}" alt="${getText(property.title)}">
-          </div>
+    properties_title: "Our properties",
+    properties_text: "Overview of available homes.",
 
-          <div class="property-body">
-            <div class="property-meta">
-              ${getText(property.type) ? `<span class="pill">${getText(property.type)}</span>` : ''}
-              ${getText(property.area) ? `<span class="pill">${getText(property.area)}</span>` : ''}
-            </div>
+    contact_title: "Contact us",
+    contact_text: "Get in touch for more information.",
+    contact_response: "We usually respond within 24 hours.",
+    contact_email_label: "Email",
+    contact_phone_label: "Phone",
+    contact_area_label: "Area",
+    contact_area_value: "Porsgrunn, Skien and Grenland",
 
-            <h3>${getText(property.title)}</h3>
-            <p class="property-address">${getText(property.address)}</p>
-            <p class="property-description">${getText(property.description)}</p>
+    form_name_label: "Name",
+    form_name_placeholder: "Your name",
+    form_email_label: "Email",
+    form_email_placeholder: "name@company.com",
+    form_company_label: "Company",
+    form_company_placeholder: "Company name",
+    form_message_label: "Message",
+    form_message_placeholder: "Tell us what you need",
 
-            <div class="property-footer">
-              <span class="property-price">${formatPrice(property.price)}</span>
-              <a class="button button-secondary property-button" href="#kontakt">
-                ${translations[currentLang].send_btn}
-              </a>
-            </div>
-          </div>
-        </article>
-      `).join("");
-    } catch (error) {
-      grid.innerHTML = `<div class="empty-state">Kunne ikke laste eiendommene: ${error.message}</div>`;
-    }
+    send_btn: "Send inquiry",
+    sending: "Sending...",
+    sent: "Sent ✓",
+    form_success: "Your inquiry has been sent!",
+    form_error: "Something went wrong."
   }
+};
 
-  function setLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem("lang", lang);
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
 
-    document.querySelectorAll("[data-key]").forEach(el => {
-      const key = el.getAttribute("data-key");
-      if (translations[lang][key]) {
-        el.innerText = translations[lang][key];
-      }
-    });
+  document.querySelectorAll("[data-key]").forEach(el => {
+    const key = el.dataset.key;
+    if (translations[lang][key]) el.innerText = translations[lang][key];
+  });
 
-    document.getElementById("lang-no")?.classList.remove("active");
-    document.getElementById("lang-en")?.classList.remove("active");
-    document.getElementById("lang-" + lang)?.classList.add("active");
+  document.querySelectorAll("[data-placeholder-key]").forEach(el => {
+    const key = el.dataset.placeholderKey;
+    if (translations[lang][key]) el.placeholder = translations[lang][key];
+  });
 
-    loadProperties();
-  }
+  document.getElementById("lang-no").classList.remove("active");
+  document.getElementById("lang-en").classList.remove("active");
+  document.getElementById("lang-" + lang).classList.add("active");
+
+  loadProperties();
+}
 
 window.setLanguage = setLanguage;
-
-  document.getElementById("year").textContent = new Date().getFullYear();
-  setLanguage(currentLang);
-</script>
-</script>
-
-<script>
-  const form = document.getElementById("contact-form");
-  const successMessage = document.getElementById("form-success");
-  const submitBtn = document.getElementById("submit-btn");
-
-  if (form && successMessage && submitBtn) {
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
-
-      submitBtn.disabled = true;
-      submitBtn.innerText = currentLang === "en" ? "Sending..." : "Sender...";
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: formData
-        });
-
-        if (response.ok) {
-          successMessage.style.display = "block";
-          form.reset();
-          submitBtn.innerText = currentLang === "en" ? "Sent ✓" : "Sendt ✓";
-        } else {
-          alert(currentLang === "en" ? "Something went wrong. Please try again." : "Noe gikk galt. Prøv igjen.");
-          submitBtn.disabled = false;
-          submitBtn.innerText = currentLang === "en" ? "Send inquiry" : "Send forespørsel";
-        }
-      } catch (error) {
-        alert(currentLang === "en" ? "Something went wrong. Please try again." : "Noe gikk galt. Prøv igjen.");
-        submitBtn.disabled = false;
-        submitBtn.innerText = currentLang === "en" ? "Send inquiry" : "Send forespørsel";
-      }
-    });
-  }
+setLanguage(currentLang);
 </script>
 
 </body>
