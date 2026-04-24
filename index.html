@@ -467,6 +467,26 @@
         align-items:flex-start;
       }
     }
+    .lang-switch{
+  display:flex;
+  gap:6px;
+  margin-left:10px;
+}
+
+.lang-switch button{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.2);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: .8rem;
+}
+
+.lang-switch button.active{
+  background: var(--gold);
+  border-color: var(--gold);
+}
   </style>
 </head>
 <body>
@@ -476,10 +496,15 @@
         <img src="assets/logo-monogram.png" alt="RE monogram" />
         <span>Reinhartsen Eiendom AS</span>
       </a>
-      <nav class="nav-links">
-        <a href="#eiendommer">Eiendommer</a>
-          <a href="#kontakt">Kontakt</a>
-      </nav>
+    <nav class="nav-links">
+  <a href="#eiendommer" data-key="nav_properties">Eiendommer</a>
+  <a href="#kontakt" data-key="nav_contact">Kontakt</a>
+
+  <div class="lang-switch">
+    <button onclick="setLanguage('no')" id="lang-no">NO</button>
+    <button onclick="setLanguage('en')" id="lang-en">EN</button>
+  </div>
+</nav>
     </div>
   </header>
 
@@ -703,6 +728,56 @@
 
   document.getElementById("year").textContent = new Date().getFullYear();
   loadProperties();
+  <script>
+  let currentLang = localStorage.getItem("lang") || "no";
+
+  const getText = ...
+  const formatPrice = ...
+
+  async function loadProperties() {
+    ...
+  }
+
+  // 👇 LIM INN HER (punkt 3)
+  const translations = {
+    no: {
+      nav_properties: "Eiendommer",
+      nav_contact: "Kontakt",
+      send_btn: "Send forespørsel"
+    },
+    en: {
+      nav_properties: "Properties",
+      nav_contact: "Contact",
+      send_btn: "Send inquiry"
+    }
+  };
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-key]").forEach(el => {
+      const key = el.getAttribute("data-key");
+      if (translations[lang][key]) {
+        el.innerText = translations[lang][key];
+      }
+    });
+
+    document.getElementById("lang-no").classList.remove("active");
+    document.getElementById("lang-en").classList.remove("active");
+    document.getElementById("lang-" + lang).classList.add("active");
+
+    loadProperties();
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "no";
+    setLanguage(savedLang);
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  loadProperties();
+</script>
 </script>
 
 <script>
