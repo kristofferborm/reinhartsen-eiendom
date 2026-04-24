@@ -628,72 +628,84 @@
     </div>
   </footer>
 
-  <script>
-    const currency = (value) => {
-      if (!value && value !== 0) return "";
-      return new Intl.NumberFormat("nb-NO", {
-        style: "currency",
-        currency: "NOK",
-        maximumFractionDigits: 0
-      }).format(Number(value));
-    };
+<script>
+  let currentLang = localStorage.getItem("lang") || "no";
 
-    async function loadProperties() {
-      const grid = document.getElementById("properties-grid");
-      const stat = document.getElementById("stat-properties");
+  const formatPrice = (price) => {
+    if (!price && price !== 0) return "";
 
-      try {
-        const response = await fetch("content/properties.json");
-        if (!response.ok) {
-          throw new Error("HTTP " + response.status);
-        }
-
-        const data = await response.json();
-        const properties = data.properties || [];
-
-        if (stat) {
-          stat.textContent = properties.length;
-        }
-
-        if (!properties.length) {
-          grid.innerHTML = '<div class="empty-state">Ingen eiendommer er lagt inn ennå.</div>';
-          return;
-        }
-
-        grid.innerHTML = properties.map(property => `
-          <article class="property-card">
-            <div class="property-image">
-              <img src="${property.image || ''}" alt="${property.title || ''}">
-            </div>
-
-            <div class="property-body">
-              <div class="property-meta">
-                ${property.type ? `<span class="pill">${property.type}</span>` : ''}
-                ${property.area ? `<span class="pill">${property.area}</span>` : ''}
-              </div>
-
-              <h3>${property.title || ''}</h3>
-              <p class="property-address">${property.address || ''}</p>
-              <p class="property-description">${property.description || ''}</p>
-
-              <div class="property-footer">
-                <span class="property-price">${property.price ? `Fra ${currency(property.price)} / mnd` : ''}</span>
-                <a class="button button-secondary property-button" href="#kontakt">Send forespørsel</a>
-              </div>
-            </div>
-          </article>
-        `).join("");
-      } catch (error) {
-        grid.innerHTML = `<div class="empty-state">Kunne ikke laste eiendommene: ${error.message}</div>`;
-        console.error(error);
-      }
+    if (currentLang === "en") {
+      const eur = price * 0.085;
+      return "From €" + Math.round(eur).toLocaleString("en-GB") + " / month";
     }
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-    loadProperties();
-  </script>
+    return "Fra " + Number(price).toLocaleString("nb-NO") + " kr / mnd";
+  };
 
-  <script>
+  const getText = (value) => {
+    if (!value) return "";
+    if (typeof value === "object") return value[currentLang] || value.no || value.en || "";
+    return value;
+  };
+
+  async function loadProperties() {
+    const grid = document.getElementById("properties-grid");
+    const stat = document.getElementById("stat-properties");
+
+    try {
+      const response = await fetch("content/properties.json");
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const data = await response.json();
+      const properties = data.properties || [];
+
+      if (stat) {
+        stat.textContent = properties.length;
+      }
+
+      if (!properties.length) {
+        grid.innerHTML = '<div class="empty-state">Ingen eiendommer er lagt inn ennå.</div>';
+        return;
+      }
+
+      grid.innerHTML = properties.map(property => `
+        <article class="property-card">
+          <div class="property-image">
+            <img src="${property.image || ''}" alt="${getText(property.title)}">
+          </div>
+
+          <div class="property-body">
+            <div class="property-meta">
+              ${getText(property.type) ? `<span class="pill">${getText(property.type)}</span>` : ''}
+              ${getText(property.area) ? `<span class="pill">${getText(property.area)}</span>` : ''}
+            </div>
+
+            <h3>${getText(property.title)}</h3>
+            <p class="property-address">${getText(property.address)}</p>
+            <p class="property-description">${getText(property.description)}</p>
+
+            <div class="property-footer">
+              <span class="property-price">${formatPrice(property.price)}</span>
+              <a class="button button-secondary property-button" href="#kontakt">
+                ${currentLang === "en" ? "Send inquiry" : "Send forespørsel"}
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    } catch (error) {
+      grid.innerHTML = `<div class="empty-state">Kunne ikke laste eiendommene: ${error.message}</div>`;
+      console.error(error);
+    }
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  loadProperties();
+</script>
+
+<script>
   const form = document.getElementById("contact-form");
   const successMessage = document.getElementById("form-success");
   const submitBtn = document.getElementById("submit-btn");
@@ -703,7 +715,7 @@
       e.preventDefault();
 
       submitBtn.disabled = true;
-      submitBtn.innerText = "Sender...";
+      submitBtn.innerText = currentLang === "en" ? "Sending..." : "Sender...";
 
       const formData = new FormData(form);
 
@@ -716,16 +728,16 @@
         if (response.ok) {
           successMessage.style.display = "block";
           form.reset();
-          submitBtn.innerText = "Sendt ✓";
+          submitBtn.innerText = currentLang === "en" ? "Sent ✓" : "Sendt ✓";
         } else {
-          alert("Noe gikk galt. Prøv igjen.");
+          alert(currentLang === "en" ? "Something went wrong. Please try again." : "Noe gikk galt. Prøv igjen.");
           submitBtn.disabled = false;
-          submitBtn.innerText = "Send forespørsel";
+          submitBtn.innerText = currentLang === "en" ? "Send inquiry" : "Send forespørsel";
         }
       } catch (error) {
-        alert("Noe gikk galt. Prøv igjen.");
+        alert(currentLang === "en" ? "Something went wrong. Please try again." : "Noe gikk galt. Prøv igjen.");
         submitBtn.disabled = false;
-        submitBtn.innerText = "Send forespørsel";
+        submitBtn.innerText = currentLang === "en" ? "Send inquiry" : "Send forespørsel";
       }
     });
   }
