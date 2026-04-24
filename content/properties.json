@@ -1,32 +1,77 @@
 {
   "properties": [
     {
-      "title": "Deichmansgate 37",
-      "address": "Porsgrunn",
-      "type": "Utleieeiendom",
-      "area": "Ca. 180 kvm",
-      "price": 41500,
-      "description": "Renovert enebolig med 5 soverom i Porsgrunn. Moderne standard gjennomgående, fullt møblert og innflyttingsklar.\n\nPasser godt for bedrifter som trenger bolig til ansatte i Porsgrunn- og Skien-området. Ta kontakt for pris.",
+      "title": {
+        "no": "Deichmansgate 37",
+        "en": "Deichmansgate 37"
+      },
+      "address": {
+        "no": "Porsgrunn",
+        "en": "Porsgrunn"
+      },
+      "type": {
+        "no": "Utleieeiendom",
+        "en": "Rental property"
+      },
+      "area": {
+        "no": "Ca. 180 kvm",
+        "en": "Approx. 180 sqm"
+      },
+      "price": 37400,
+      "description": {
+        "no": "Renovert enebolig med 5 soverom i Porsgrunn. Moderne standard gjennomgående, fullt møblert og innflyttingsklar.\n\nPasser godt for bedrifter som trenger bolig til ansatte i Porsgrunn- og Skien-området. Ta kontakt for pris.",
+        "en": "Renovated detached house with 5 bedrooms in Porsgrunn. Modern standard throughout, fully furnished and ready for immediate occupancy.\n\nWell suited for companies needing housing for employees in the Porsgrunn and Skien area. Contact us for pricing."
+      },
       "link": "",
       "image": "assets/uploads/bilde-11-jul-2024-12-42-1-.jpg"
     },
     {
-      "title": "Lunderingen 9",
-      "address": "Vestfold / Telemark",
-      "type": "Utleieeiendom",
-      "area": "Ca. 150 kvm",
-      "price": 38549,
-      "description": "Enebolig med 4 soverom på Heistad i Porsgrunn. 2 dusjer og 2 toaletter, samt parkering til 2 biler.\n\nTilgjengelig fra 1. mai 2026. Passer godt for ansatte på oppdrag i Porsgrunn- og Skien-området.",
+      "title": {
+        "no": "Lunderingen 9",
+        "en": "Lunderingen 9"
+      },
+      "address": {
+        "no": "Vestfold / Telemark",
+        "en": "Vestfold / Telemark"
+      },
+      "type": {
+        "no": "Utleieeiendom",
+        "en": "Rental property"
+      },
+      "area": {
+        "no": "Ca. 150 kvm",
+        "en": "Approx. 150 sqm"
+      },
+      "price": 34900,
+      "description": {
+        "no": "Enebolig med 4 soverom på Heistad i Porsgrunn. 2 dusjer og 2 toaletter, samt parkering til 2 biler.\n\nTilgjengelig fra 1. mai 2026. Passer godt for ansatte på oppdrag i Porsgrunn- og Skien-området.",
+        "en": "Detached house with 4 bedrooms located in Heistad, Porsgrunn. Includes 2 showers and 2 toilets, as well as parking for 2 cars.\n\nAvailable from May 1, 2026. Well suited for employees on assignment in the Porsgrunn and Skien area."
+      },
       "link": "",
       "image": "assets/uploads/skjermbilde-2026-04-22-kl.-14.23.55.png"
     },
     {
-      "title": "Gravabakken 9",
-      "address": "Porsgrunn/Grenland",
-      "type": "Bolig",
-      "area": "Ca. 200 kvm",
-      "price": 58650,
-      "description": "Romslig enebolig med 7 soverom, 2,5 bad og 2 kjøkken på Heistad i Porsgrunn.\n\nPasser godt for bedrifter som trenger bolig til en større gruppe ansatte i Grenlandsområdet. Ta kontakt for pris.",
+      "title": {
+        "no": "Gravabakken 9",
+        "en": "Gravabakken 9"
+      },
+      "address": {
+        "no": "Porsgrunn/Grenland",
+        "en": "Porsgrunn / Grenland"
+      },
+      "type": {
+        "no": "Bolig",
+        "en": "Residential property"
+      },
+      "area": {
+        "no": "Ca. 200 kvm",
+        "en": "Approx. 200 sqm"
+      },
+      "price": 49950,
+      "description": {
+        "no": "Romslig enebolig med 7 soverom, 2,5 bad og 2 kjøkken på Heistad i Porsgrunn.\n\nPasser godt for bedrifter som trenger bolig til en større gruppe ansatte i Grenlandsområdet. Ta kontakt for pris.",
+        "en": "Spacious detached house with 7 bedrooms, 2.5 bathrooms and 2 kitchens located in Heistad, Porsgrunn.\n\nIdeal for companies needing accommodation for a larger group of employees in the Grenland area. Contact us for pricing."
+      },
       "link": "",
       "image": "assets/uploads/skjermbilde-2026-04-22-kl.-14.25.15.png"
     }
