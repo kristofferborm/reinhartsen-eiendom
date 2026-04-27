@@ -353,11 +353,17 @@
     }
 
     .contact-wrap{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:24px;
-      align-items:stretch;
-    }
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:32px;
+  align-items:stretch;
+}
+
+@media (max-width: 960px){
+  .contact-wrap{
+    grid-template-columns:1fr;
+  }
+}
 
     .contact-card,.form-card{
       border-radius:var(--radius);
@@ -377,11 +383,19 @@
     }
 
     .contact-item{
-      padding:16px 18px;
-      border-radius:16px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.05);
-    }
+  padding:18px 20px;
+  border-radius:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.contact-item a{
+  color:#25D366;
+  font-weight:600;
+}
 
     .contact-item strong{
       display:block;
@@ -393,6 +407,23 @@
       background:#fff;
       color:#101828;
     }
+    .form-card{
+  background:#ffffff;
+  color:#101828;
+  border-radius:20px;
+  padding:32px;
+}
+
+.form-card input,
+.form-card textarea{
+  background:#f9fafb;
+  border:1px solid #e5e7eb;
+}
+
+.form-card button{
+  width:100%;
+  font-size:1rem;
+}
 
     form{display:grid;gap:14px}
 
@@ -461,8 +492,8 @@
     }
 
     #eiendommer,#kontakt{
-      padding-top:70px;
-      padding-bottom:70px;
+      padding-top:90px;
+      padding-bottom:90px;
     }
 
     @media(max-width:960px){
@@ -644,22 +675,31 @@
                 <span>kristoffer@reinhartsen.com</span>
               </div>
 
-              <div class="contact-item">
-                <div class="contact-item">
-<strong data-key="contact_whatsapp_label">WhatsApp</strong>
-<a href="https://wa.me/4790500668?text=Hei!%20Jeg%20er%20interessert%20i%20bolig%20for%20ansatte." target="_blank"> data-key="contact_whatsapp_text">
-  Send oss en melding på WhatsApp
-</a>
-                <strong data-key="contact_phone_label">Telefon</strong>
-                <span>+47 905 00 668</span>
-              </div>
+              <div class="contact-list">
 
-              <div class="contact-item">
-                <strong data-key="contact_area_label">Område</strong>
-                <span data-key="contact_area_value">Porsgrunn, Skien og Grenland</span>
-              </div>
-            </div>
-          </div>
+  <div class="contact-item">
+    <strong data-key="contact_email_label">E-post</strong>
+    <span>kristoffer@reinhartsen.com</span>
+  </div>
+
+  <div class="contact-item">
+    <strong data-key="contact_whatsapp_label">WhatsApp</strong>
+    <a href="https://wa.me/4790500668" target="_blank" data-key="contact_whatsapp_text">
+      Send oss en melding på WhatsApp
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <strong data-key="contact_phone_label">Telefon</strong>
+    <span>+47 905 00 668</span>
+  </div>
+
+  <div class="contact-item">
+    <strong data-key="contact_area_label">Område</strong>
+    <span data-key="contact_area_value">Porsgrunn, Skien og Grenland</span>
+  </div>
+
+</div>
 
           <div class="form-card">
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
