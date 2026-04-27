@@ -547,6 +547,23 @@
     font-size: .92rem;
   }
 }
+    .contact-wrap{
+  display:grid !important;
+  grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap:32px !important;
+  align-items:start !important;
+}
+
+.contact-card,
+.form-card{
+  width:100% !important;
+}
+
+@media(max-width:760px){
+  .contact-wrap{
+    grid-template-columns:1fr !important;
+  }
+}
   </style>
 </head>
 <a
