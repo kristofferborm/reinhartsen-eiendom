@@ -488,9 +488,45 @@
         align-items:flex-start;
       }
     }
+    .whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 14px 35px rgba(0,0,0,.22);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+}
+
+@media(max-width:640px){
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    padding: 13px 15px;
+    font-size: .92rem;
+  }
+}
   </style>
 </head>
-
+<a
+  id="whatsapp-float"
+  class="whatsapp-float"
+  href="https://wa.me/4790500668"
+  target="_blank"
+  rel="noopener"
+>
+  WhatsApp
+</a>
 <body>
   <header class="topbar">
     <div class="container nav">
@@ -609,6 +645,11 @@
               </div>
 
               <div class="contact-item">
+                <div class="contact-item">
+<strong data-key="contact_whatsapp_label">WhatsApp</strong>
+<a href="https://wa.me/4790500668?text=Hei!%20Jeg%20er%20interessert%20i%20bolig%20for%20ansatte." target="_blank"> data-key="contact_whatsapp_text">
+  Send oss en melding på WhatsApp
+</a>
                 <strong data-key="contact_phone_label">Telefon</strong>
                 <span>+47 905 00 668</span>
               </div>
@@ -680,6 +721,10 @@
         hero_text: "Vi tilbyr fleksible og fullt møblerte boliger for selskaper som trenger trygg, effektiv og profesjonell innkvartering av ansatte.",
         hero_cta_properties: "Se eiendommer",
         hero_cta_contact: "Kontakt oss",
+        contact_whatsapp_label: "WhatsApp",
+        contact_whatsapp_text: "Chat med oss på WhatsApp",
+        whatsapp_text: "WhatsApp",
+        whatsapp_message: "Hei! Jeg er interessert i bolig for ansatte.",
         trust_1_title: "Fullt møblerte boliger",
 trust_1_text: "Innflyttingsklare boliger med praktiske møbler og utstyr.",
 trust_2_title: "Fleksible leieforhold",
@@ -726,6 +771,10 @@ trust_6_text: "Boliger med flere soverom og gode fellesarealer.",
         hero_cta_contact: "Contact us",
         trust_title: "Why choose us",
         trust_text: "Simple and practical housing solutions for companies that need employee accommodation in Porsgrunn, Skien and Grenland.",
+        contact_whatsapp_label: "WhatsApp",
+        contact_whatsapp_text: "Chat with us on WhatsApp",
+        whatsapp_text: "WhatsApp",
+        whatsapp_message: "Hi! I am interested in housing for employees.",
       trust_1_title: "Fully furnished homes",
 trust_1_text: "Move-in ready homes with practical furniture and equipment.",
 trust_2_title: "Flexible rental terms",
@@ -847,7 +896,13 @@ trust_6_text: "Homes with several bedrooms and comfortable shared areas.",
 
       const submitBtn = document.getElementById("submit-btn");
       if (submitBtn && !submitBtn.disabled) submitBtn.innerText = translations[lang].send_btn;
+      const whatsappFloat = document.getElementById("whatsapp-float");
 
+if (whatsappFloat) {
+  const message = encodeURIComponent(translations[lang].whatsapp_message);
+  whatsappFloat.href = `https://wa.me/4790500668?text=${message}`;
+  whatsappFloat.innerText = translations[lang].whatsapp_text;
+}
       loadProperties();
     }
 
