@@ -566,15 +566,7 @@
 }
   </style>
 </head>
-<a
-  id="whatsapp-float"
-  class="whatsapp-float"
-  href="https://wa.me/4790500668"
-  target="_blank"
-  rel="noopener"
->
-  WhatsApp
-</a>
+
 <body>
   <header class="topbar">
     <div class="container nav">
@@ -672,89 +664,95 @@
       </div>
     </section>
 
-    <section id="kontakt">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <h2 data-key="contact_title">Kontakt oss</h2>
-            <p data-key="contact_text">Ta kontakt dersom dere ønsker mer informasjon om boligene, tilgjengelighet eller leie for ansatte og bedrifter.</p>
+  <section id="kontakt">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <h2 data-key="contact_title">Kontakt oss</h2>
+        <p data-key="contact_text">
+          Ta kontakt dersom dere ønsker mer informasjon om boligene, tilgjengelighet eller leie for ansatte og bedrifter.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <h3>Reinhartsen Eiendom AS</h3>
+        <p class="small" data-key="contact_response">Vi svarer normalt innen 24 timer.</p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <strong data-key="contact_email_label">E-post</strong>
+            <span>kristoffer@reinhartsen.com</span>
           </div>
-        </div>
 
-        <div class="contact-wrap">
-          <div class="contact-card">
-            <h3>Reinhartsen Eiendom AS</h3>
-            <p class="small" data-key="contact_response">Vi svarer normalt innen 24 timer.</p>
+          <div class="contact-item">
+            <strong data-key="contact_whatsapp_label">WhatsApp</strong>
+            <a href="https://wa.me/4790500668" target="_blank" rel="noopener" data-key="contact_whatsapp_text">
+              Chat med oss på WhatsApp
+            </a>
+          </div>
 
-            <div class="contact-list">
-              <div class="contact-item">
-                <strong data-key="contact_email_label">E-post</strong>
-                <span>kristoffer@reinhartsen.com</span>
-              </div>
+          <div class="contact-item">
+            <strong data-key="contact_phone_label">Telefon</strong>
+            <span>+47 905 00 668</span>
+          </div>
 
-              <div class="contact-list">
-
-  <div class="contact-item">
-    <strong data-key="contact_email_label">E-post</strong>
-    <span>kristoffer@reinhartsen.com</span>
-  </div>
-
-  <div class="contact-item">
-    <strong data-key="contact_whatsapp_label">WhatsApp</strong>
-    <a href="https://wa.me/4790500668" target="_blank" data-key="contact_whatsapp_text">
-      Send oss en melding på WhatsApp
-    </a>
-  </div>
-
-  <div class="contact-item">
-    <strong data-key="contact_phone_label">Telefon</strong>
-    <span>+47 905 00 668</span>
-  </div>
-
-  <div class="contact-item">
-    <strong data-key="contact_area_label">Område</strong>
-    <span data-key="contact_area_value">Porsgrunn, Skien og Grenland</span>
-  </div>
-
-</div>
-
-          <div class="form-card">
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="2f7fd0ec-a9de-4b93-b35b-8edd5e042bc1">
-              <input type="checkbox" name="botcheck" style="display:none;">
-
-              <div class="field">
-                <label for="name" data-key="form_name_label">Navn</label>
-                <input id="name" type="text" name="name" placeholder="Ditt navn" data-placeholder-key="form_name_placeholder" required />
-              </div>
-
-              <div class="field">
-                <label for="email" data-key="form_email_label">E-post</label>
-                <input id="email" type="email" name="email" placeholder="navn@firma.no" data-placeholder-key="form_email_placeholder" required />
-              </div>
-
-              <div class="field">
-                <label for="company" data-key="form_company_label">Firma</label>
-                <input id="company" type="text" name="company" placeholder="Firmanavn" data-placeholder-key="form_company_placeholder" />
-              </div>
-
-              <div class="field">
-                <label for="message" data-key="form_message_label">Melding</label>
-                <textarea id="message" name="message" placeholder="Fortell kort hva dere ser etter" data-placeholder-key="form_message_placeholder" required></textarea>
-              </div>
-
-              <button id="submit-btn" class="button button-primary" type="submit" data-key="send_btn">Send forespørsel</button>
-
-              <div id="form-success" class="success-message" data-key="form_success">
-                Forespørselen er sendt! Vi tar kontakt innen kort tid.
-              </div>
-            </form>
+          <div class="contact-item">
+            <strong data-key="contact_area_label">Område</strong>
+            <span data-key="contact_area_value">Porsgrunn, Skien og Grenland</span>
           </div>
         </div>
       </div>
-    </section>
-  </main>
 
+      <div class="form-card">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="2f7fd0ec-a9de-4b93-b35b-8edd5e042bc1">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="field">
+            <label for="name" data-key="form_name_label">Navn</label>
+            <input id="name" type="text" name="name" placeholder="Ditt navn" data-placeholder-key="form_name_placeholder" required />
+          </div>
+
+          <div class="field">
+            <label for="email" data-key="form_email_label">E-post</label>
+            <input id="email" type="email" name="email" placeholder="navn@firma.no" data-placeholder-key="form_email_placeholder" required />
+          </div>
+
+          <div class="field">
+            <label for="company" data-key="form_company_label">Firma</label>
+            <input id="company" type="text" name="company" placeholder="Firmanavn" data-placeholder-key="form_company_placeholder" />
+          </div>
+
+          <div class="field">
+            <label for="message" data-key="form_message_label">Melding</label>
+            <textarea id="message" name="message" placeholder="Fortell kort hva dere ser etter" data-placeholder-key="form_message_placeholder" required></textarea>
+          </div>
+
+          <button id="submit-btn" class="button button-primary" type="submit" data-key="send_btn">
+            Send forespørsel
+          </button>
+
+          <div id="form-success" class="success-message" data-key="form_success">
+            Forespørselen er sendt! Vi tar kontakt innen kort tid.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+<a
+  id="whatsapp-float"
+  class="whatsapp-float"
+  href="https://wa.me/4790500668"
+  target="_blank"
+  rel="noopener"
+>
+  WhatsApp
+</a>
+  
   <footer class="footer">
     <div class="container footer-inner">
       <span>© <span id="year"></span> Reinhartsen Eiendom AS</span>
